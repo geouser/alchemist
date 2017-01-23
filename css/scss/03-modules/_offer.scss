@@ -1,3 +1,10 @@
 .offer {
-    height: 800px;
+    @include flex($direction: column, $justify: center);
+    height: 100%;
+    max-height: 920px;
+    min-width: 500px;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
 }

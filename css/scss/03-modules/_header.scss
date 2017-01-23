@@ -1,8 +1,10 @@
          
 .mainHeader {
-    @include position(absolute, 0, auto, auto, 0);
+    @include position(absolute, 0, 0, auto, 0);
     @include transition(all, .4s);
-    
+    .wrapper {
+        @include flex();
+    } 
         /*.................media.............*/
         @include m800 {
             @include position(fixed, 0, auto, auto, -100%);
@@ -14,10 +16,55 @@
 /* ------------------------------------ */
 /*  NAV STYLES  */
 .mainNav {
-            /*.................media.............*/
-            @include m800 { 
+    color: $blue;
+    ul {
+        display: inline-block;
+        vertical-align: middle;
+        list-style-type: none;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 40px;
+            a {
+                display: inline-block;
+                color: #9d99bf;
+                font: 13px $oss;
+                line-height: 28px;
+                position: relative;
+                @include transition(all, .2s);
+                &:after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 100%;
+                    left: 0;
+                    right: 0;
+                    bottom: 0px;
+                    margin: auto;
+                    background-color: #FFF;
+                    max-width: 0;
+                    @include transition(all, .2s);
+                    z-index: 2;
+                }
+                &:hover,
+                &.active {
+                    color: #FFF;
+                }
+                &:hover:after {
+                    max-width: 100%;
+                }
             }
-            /*.............end media.............*/
+        }
+    }
+}
+
+.tel {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFF;
+    margin-left: 40px;
+    font-size: 14px;
 }
 
 
