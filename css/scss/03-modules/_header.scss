@@ -2,6 +2,7 @@
 .mainHeader {
     @include position(absolute, 0, 0, auto, 0);
     @include transition(all, .4s);
+    z-index: 100;
     .wrapper {
         @include flex();
     } 
@@ -28,7 +29,7 @@
             a {
                 display: inline-block;
                 color: #9d99bf;
-                font: 13px $oss;
+                font: 13px $osb;
                 line-height: 28px;
                 position: relative;
                 @include transition(all, .2s);
