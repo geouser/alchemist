@@ -11,7 +11,7 @@
 
 .sboutIcons {
     @include flex($alignI: flex-start);
-    padding: 40px 0;
+    padding: 40px 0 0;
     &__item {
         width: 33.332%;
         i {
