@@ -1,0 +1,56 @@
+.join {
+    padding: 50px 0 70px;
+    background-image: url(../images/join.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+
+    .left-side {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: -webkit-calc(50% + 400px);
+        width: calc(50% + 400px);
+        background-color: $purple;
+        opacity: 0.97;
+    }
+
+    .right-side {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: -webkit-calc(50% - 400px);
+        width: calc(50% - 400px);
+        background-color: $blue;
+        opacity: 0.97;
+    }
+
+
+    .person-image {
+        position: absolute;
+        bottom: 0;
+        right: -webkit-calc(50% - 400px);
+        right: calc(50% - 400px);
+        -webkit-transform: translateX(160px);
+        -ms-transform: translateX(160px);
+        -o-transform: translateX(160px);
+        transform: translateX(160px);
+    }
+
+    .form {
+        width: 400px;
+        display: block;
+        margin-left: 200px;
+
+        &-title {
+            font-size: 28px;
+            color: $white;
+            font-family: $cb;
+            margin-bottom: 65px;
+        }
+    }
+}

@@ -39,6 +39,28 @@ jQuery(document).ready(function($) {
             $element2.toggleClass(className, $document.scrollTop() >= 1);
         });
     });
+
+
+    /*---------------------------
+                                  Custom file button
+    ---------------------------*/
+    $('input[type=file]').each(function(index, el) {
+        $(this).wrap('<div class="custom-file"></div>');
+        var parent = $(this).parent();
+        parent.append('<button class="button file-button" data-label="Attach a file"><span class="holder">Attach a file</span></button>');
+
+        $(this).on('change', function(event) {
+            event.preventDefault();
+            if ( $(this).val() != '' ) {
+                var filename = $(this).val().split('/').pop().split('\\').pop();
+            } else {
+                var filename = $(this).siblings('.file-button').attr('data-label');
+            }
+            $(this).siblings('.file-button').find('.holder').text(filename);
+
+            
+        });
+    });
     
     /*---------------------------
                                 PAGE ANCHORS

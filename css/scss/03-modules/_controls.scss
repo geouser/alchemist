@@ -1,0 +1,114 @@
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    height: 38px;
+    line-height: 38px;
+    border: 0;
+    background-color: $blue;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 11px;
+    font-family: $ob;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    padding: 0 33px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #3593B2;
+    }
+
+    &:disabled {
+        opacity: 0.75;
+        cursor: wait;
+    }
+}
+
+
+
+input[type=text],
+input[type=tel],
+input[type=email] {
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    padding: 0 15px;
+    border-radius: 3px;
+    border: 0;
+    height: 38px;
+}
+
+.form-group {
+    display: block;
+    position: relative;
+
+    &:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+
+    &.button-group {
+        text-align: right;
+    }
+}
+
+::-webkit-file-upload-button { cursor:pointer; }
+.custom-file {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    max-width: 150px;
+    margin-left: 75px;
+
+    input {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 10;
+
+        & * {
+            cursor: pointer;
+        }
+    }
+
+    .file-button {
+        background-color: transparent;
+        position: relative;
+        padding: 0;
+        font-family: $o;
+        color: $blue;
+        font-size: 13px;
+        text-transform: none;
+        z-index: -1;
+        @include textEnd($overflow: ellipsis);
+        max-width: 100%;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            width: 16px;
+            height: 19px;
+            background-image: url(../images/file.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-right: 15px;
+        }
+
+        .holder {
+            display: inline-block;
+            vertical-align: middle;
+            border-bottom: 1px dashed $blue;
+            line-height: 16px;
+        }
+    }
+}
