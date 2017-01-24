@@ -8,3 +8,49 @@
          -o-background-size: cover;
             background-size: cover;
 }
+
+.sboutIcons {
+    @include flex($alignI: flex-start);
+    padding: 40px 0;
+    &__item {
+        width: 33.332%;
+        i {
+            display: inline-block;
+            vertical-align: top;
+            width: 80px;
+            text-align: left;
+        }
+        p {
+            display: inline-block;
+            vertical-align: top;
+            width: 230px;
+            text-align: left;
+            margin-left: 15px;
+            font: 16px/22px $cb;
+            color: #333146;
+        }
+    }
+}
+
+.advantages {
+    @include flex($alignI: flex-start);
+    &__item {
+        width: 25%;
+        padding: 0 15px;
+        i {
+            display: block;
+            overflow: hidden;
+            margin-bottom: 14px;
+            -webkit-border-radius: 4px;
+                    border-radius: 4px;
+            img {
+                width: 100%;
+            }
+        }
+        p {
+            color: #0D1321;
+            font-size: 15px;
+            padding: 0 25px;
+        }
+    }
+}
