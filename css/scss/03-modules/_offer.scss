@@ -54,3 +54,94 @@
         }
     }
 }
+
+.listInfo {
+    @include flex($alignI: stretch);
+    &__list,
+    &__img {
+        width: 50%;
+    }
+    &__list {
+        padding: 130px 120px;
+        background-color: $purple;
+    }
+    ul {
+        list-style-type: none;
+        position: relative;
+        li {
+            color: #FFF;
+            font-size: 18px;
+            line-height: 30px;
+            font-family: $osb;
+            margin-bottom: 50px;
+            &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 55px;
+                width: 30px;
+                height: 30px;
+                background-color: $purple;
+                position: relative;
+                z-index: 2;
+                -webkit-box-sizing: border-box;
+                   -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                margin-left: -15px;
+                border: 8px solid #fffaff;
+                -webkit-border-radius: 50%;
+                        border-radius: 50%;
+            }
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                max-width: -webkit-calc(100% - 75px);
+                max-width: calc(100% - 75px);
+            }
+        }
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left:0;
+            top:40px;
+            bottom:40px;
+            width: 1px;
+            background-color: #bab2ff;
+            opacity: .15;
+        }
+    }
+    &__img {
+        background-position: 50% 50%;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+    }
+}
+
+.timeline {
+    &__img {
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+    &__info {
+        @include flex($alignI: flex-start);
+        ul {
+            width: 25%;
+            list-style-type: none;
+            padding: 0 30px;
+            li {
+                font: 18px/30px $osb;
+                margin-bottom: 20px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            &:last-of-type {
+                li {
+                    color: #3da8cc;
+                }
+            }
+        }
+    }
+}
