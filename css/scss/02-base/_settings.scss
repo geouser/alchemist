@@ -24,7 +24,7 @@ h1 {
     text-align: center;
     display: block;
     margin: 0 auto 40px;
-    &:before {
+    &--title:before {
         display: block;
         content: "";
         width: 44px;
@@ -43,6 +43,12 @@ h1 {
 }
 .padding {
     padding: 100px 0 140px;
+}
+.small-padding {
+    padding: 50px 0 90px;
+}
+.bg {
+    background-color: #f2f0f2;
 }
 
 // lAYOUT
