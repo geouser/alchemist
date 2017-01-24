@@ -56,6 +56,16 @@
                     max-width: 100%;
                 }
             }
+
+            &.current-menu-item {
+                a {
+                    color: #fff;
+
+                    &:after {
+                        max-width: 100%;
+                    }
+                }
+            }
         }
     }
 }

@@ -1,0 +1,62 @@
+.footer {
+    background-color: $text;
+    color: #fff;
+
+    .wrapper {
+        padding: 0 15px;
+    }
+
+    &-site-name {
+        font-family: $cb;
+        font-size: 16px;
+    }
+    
+    &-top {
+        padding: 25px 0 45px 140px;
+        position: relative;
+    }
+
+    &-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &-navigation {
+        @extend .mainNav;
+
+        .menu-item a {
+            color: #596580;
+        }
+    }
+
+    &-middle {
+        text-align: left;
+        padding: 0 0 35px 140px;
+
+        .address-column {
+            display: inline-block;
+            vertical-align: top;
+            width: 270px;
+            padding-right: 15px;
+            text-align: left;
+            font-size: 14px;
+
+            .title {
+                color: $blue;
+                padding-bottom: 15px;
+                font-size: 15px;
+                font-family: $ob;
+            }
+        }
+    }
+
+
+    &-bottom {
+        text-align: right;
+        font-size: 11px;
+        color: $purple;
+        border-top: 1px solid rgba(255, 250, 255, .1);
+        padding: 15px 0;
+    }
+}
