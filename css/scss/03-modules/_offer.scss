@@ -123,13 +123,37 @@
     &__img {
         max-width: 100%;
         margin-bottom: 50px;
+        @media (max-width: 767px) {
+            display: none;
+        }
     }
     &__info {
         @include flex($alignI: flex-start);
+        @media (max-width: 767px) {
+            display: block;
+        }
         ul {
             width: 25%;
             list-style-type: none;
             padding: 0 30px;
+            @media (max-width: 767px) {
+                width: 100%;
+                display: block;
+                margin: 0 auto 40px;
+            }
+            span {
+                display: none;
+                @media (max-width: 767px) {
+                    display: block;
+                    width: 60px;
+                    margin: 0 auto 20px;
+                    line-height: 60px;
+                    border: 1px solid $purple;
+                    text-align: center;
+                    -webkit-border-radius: 50%;
+                            border-radius: 50%;
+                }
+            }
             li {
                 font: 18px/30px $osb;
                 margin-bottom: 20px;
@@ -143,5 +167,137 @@
                 }
             }
         }
+    }
+}
+
+
+.model {
+    &__des {
+        @include flex();
+        ul {
+            list-style-type: disc;
+            max-width: 245px;
+            position: relative;
+            &:before {
+                content: "1";
+                display: block;
+                position: absolute;
+                font: 150px/128px $cb;
+                color: #C5D1EB;
+                left: -77px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                opacity: .35;
+                width: 64px;
+                height: 115px;
+            }
+            li {
+                font: 18px/30px $osb;
+                margin-bottom: 24px;
+                text-align: left;
+                padding-left: 10px;
+                position: relative;
+                z-index: 2;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            &:nth-of-type(2) {
+                &:before {
+                    content: "2";
+                    left: -60px;
+                }
+            }
+            &:nth-of-type(3) {
+                &:before {
+                    content: "3";
+                    left: -60px;
+                }
+            }
+        }
+        i {
+            display: block;
+            width: 100px;
+            height: 13px;
+            background-image: url("../images/double-arrow.png");
+            -webkit-background-size: 100% 100%;
+                 -o-background-size: 100% 100%;
+                    background-size: 100% 100%;
+        }
+    }
+    &__img {
+        margin-top: 40px;
+        @include flex();
+        &__col__item {
+            height: 180px;
+            width: 270px;
+            margin-bottom: 20px;
+            height: 580px;
+            background-position: 50% 50%;
+            -webkit-background-size: cover;
+                 -o-background-size: cover;
+                    background-size: cover;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            &__3x {
+                height: 180px;
+            }
+            &:before {
+                content: "";display: inline-block;
+                vertical-align: middle;
+                height: 100%;
+            }
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                max-width: 90%;
+                color: #FFF;
+                font: 18px $osb;
+            }
+        }
+    }
+}
+
+.ship-after {
+    position: relative;
+    &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -134px;
+        content: "";
+        display: block;
+        height: 61px;
+        width: 70px;
+        margin: auto;
+        background-image: url('../images/boat-ic.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: auto;
+             -o-background-size: auto;
+                background-size: auto;
+    }
+}
+
+.car-after {
+    position: relative;
+    &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -134px;
+        content: "";
+        display: block;
+        height: 47px;
+        width: 70px;
+        margin: auto;
+        background-image: url('../images/car-ic.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: auto;
+             -o-background-size: auto;
+                background-size: auto;
     }
 }
