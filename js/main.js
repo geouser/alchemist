@@ -99,8 +99,8 @@ jQuery(document).ready(function($) {
     $('.menu-button').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('active');
-        $(this).siblings('header').toggleClass('active');
-        if ($('header').hasClass('active')) {
+        $('.mainNav').toggleClass('active');
+        if ($('.mainNav').hasClass('active')) {
                 $('body').css('overflow', 'hidden');
             } else {
                 $('body').css('overflow', 'visible');

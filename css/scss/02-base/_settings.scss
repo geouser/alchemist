@@ -6,6 +6,9 @@ body {
 	height: 100%;
     font: 15px $o;
     color: $text;
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
 }
 
 
@@ -17,6 +20,15 @@ h1 {
     font: 70px $cb;
     color: #FFF;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+    @media (max-width:1000px) {
+        font-size: 54px;
+    }
+    @media (max-width:800px) {
+        font-size: 44px;
+    }
+    @media (max-width:500px) {
+        font-size: 34px;
+    }
 }
 section {
     background-position: 50% 50%;
@@ -39,11 +51,21 @@ section {
              -o-background-size: 100% 100%;
                 background-size: 100% 100%;
     }
+    @media (max-width: 600px) {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
 }
 .page-title {
     color: $white;
     font-size: 70px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+    @media (max-width:1000px) {
+        font-size: 54px;
+    }
+    @media (max-width:800px) {
+        font-size: 44px;
+    }
 }
 .titleDescription {
     width: 625px;
@@ -51,15 +73,37 @@ section {
     line-height: 30px;
     font-size: 15px;
     margin: 0 auto 40px;
+    @media (max-width: 600px) {
+        font-size: 14px;
+        line-height: 26px;
+    }
 }
 .padding {
     padding: 140px 0 140px;
     &--top {
-        padding-bottom: 0;
+        padding-bottom: 0 !important;
+    }
+    @media (max-width: 1000px) {
+        padding: 100px 0;
+    }
+    @media (max-width: 800px) {
+        padding: 80px 0;
+    }
+    @media (max-width: 600px) {
+        padding: 60px 0;
     }
 }
 .small-padding {
     padding: 50px 0 90px;
+    @media (max-width: 1000px) {
+        padding: 40px 0 70px;
+    }
+    @media (max-width: 800px) {
+        padding: 30px 0 50px;
+    }
+    @media (max-width: 600px) {
+        padding: 20px 0 40px;
+    }
 }
 .bg {
     background-color: #f2f0f2;
@@ -69,6 +113,10 @@ section {
 // ---------------------------
 .wrapper {
 	width: 1200px;
+    @media (max-width:1200px) {
+        width: 100%;
+        padding: 0 15px;
+    }
 	margin: 0 auto;
 	text-align: center;
 }

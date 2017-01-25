@@ -14,26 +14,78 @@
     &-top {
         padding: 25px 0 45px 140px;
         position: relative;
+        @media (max-width: 600px) { 
+            padding: 15px 0 0 100px;
+        }
+        @media (max-width: 400px) {
+            padding-left: 0px;
+        }
     }
 
     &-logo {
         position: absolute;
         top: 0;
         left: 0;
+        img {
+            width: 100%;
+        }
+        @media (max-width: 600px) { 
+            width: 80px;
+        }
+        @media (max-width: 400px) {
+            display: none;
+        }
     }
 
     &-navigation {
+
         @extend .mainNav;
 
         .menu-item a {
             color: #596580;
+        }
+        @media (max-width: 760px) {
+            text-align: left;
+            position: static!important;
+            height: auto;
+            width: auto;
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            background: transparent;
+            -webkit-transform: none;
+               -moz-transform: none;
+                -ms-transform: none;
+                 -o-transform: none;
+                    transform: none;
+            ul {
+                padding: 0!important;
+            }
+            li {
+                display: inline-block!important;
+                margin: 0 8px 0 0!important;
+            }
+        }
+        @media (max-width: 400px) {
+            li {
+                margin-right: 6px !important;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                a {
+                    font-size: 14px !important;
+                }
+            }
         }
     }
 
     &-middle {
         text-align: left;
         padding: 0 0 35px 140px;
-
+        @media (max-width: 600px) { 
+            padding-left: 0;}
+        @media (max-width: 400px) {
+            padding-bottom: 0;
+        }
         .address-column {
             display: inline-block;
             vertical-align: top;
@@ -41,12 +93,20 @@
             padding-right: 15px;
             text-align: left;
             font-size: 14px;
-
+            @media (max-width: 600px) { 
+                margin-bottom: 15px;
+            }
+            @media (max-width: 500px) { 
+                font-size: 13px;
+            }
             .title {
                 color: $blue;
                 padding-bottom: 15px;
                 font-size: 15px;
                 font-family: $ob;
+                @media (max-width: 600px) { 
+                    padding-bottom: 10px;
+                }
             }
         }
     }
@@ -58,5 +118,11 @@
         color: $purple;
         border-top: 1px solid rgba(255, 250, 255, .1);
         padding: 15px 0;
+    }
+}
+
+.footer-menu {
+    @media (max-width: 600px) { 
+        margin: 15px 0;
     }
 }
